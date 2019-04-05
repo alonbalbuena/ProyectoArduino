@@ -1,13 +1,38 @@
 /* Estilos */
 
-.container {
-    border: 1px solid red;
+.btn-buscar {
+    background-image: url(../images/lupa.png);
+    background-size: cover;
+    background-position: center;
+    width: 38px;
+    height: 38px;
 }
 
-.row {
-    border: 1px solid blue;
+@media (min-width: 992px) {
+    .form-inline {
+        width: 300px;
+    }
 }
 
-.row>* {
-    border: 1px solid green;
+.bg-primary {
+    background-color: #f8c620!important;
+}
+
+.bg-secondary {
+    background-color: #000000!important;
+}
+
+.border-secondary {
+    border: 1px #000000 solid!important;
+}
+
+.btn-outline-secondary,
+.btn-outline-secondary:hover  {
+    border: none!important;
+}
+
+.btn-outline-success,
+.btn-outline-success:hover  {
+    background-color: #bebebe!important;
+    border: 1px #000000 solid!important;
 }
