@@ -1,13 +1,10 @@
 /* Estilos */
 
-.container {
-    border: 1px solid red;
-}
-
-.row {
-    border: 1px solid blue;
-}
-
-.row>* {
-    border: 1px solid green;
+.btn-buscar {
+    background-image: url(../images/lupa.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    height: 38px;
+    width: 38px;
 }
