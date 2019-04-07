@@ -13,10 +13,18 @@
 </head>
 
 <body>
-    <form action="comprobarlogin.php" method="post">
+    <div class="container bg-secondary p-5 mt-5">
+        <h1>Login</h1>
         
+        <!--usamos metodo post por la seguridad de los datos-->
+        <form action="comprobarlogin.php" method="post">
+            <input type="text" placeholder="usuario">
+            <!--encriptamos contraseña con hash MD5-->
+            <input type="password" placeholder="contraseña">
 
-    </form>
+            <input class="btn btn-primary" type="submit" value="Aceptar">
+        </form>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
