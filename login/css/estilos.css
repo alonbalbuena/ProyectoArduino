@@ -1,4 +1,15 @@
 /* Estilos */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Fredericka the Great', cursive;
+}
 
 .btn-buscar {
     background-image: url(../images/lupa.png);
@@ -50,7 +61,6 @@
 .carousel-control-next-:hover {
   height: 100px;
   width: 100px;
-  outline: ;
   background-size: 50%, 50%;
   border-radius: 50%;
   border: 3px solid white;
@@ -60,4 +70,10 @@
     padding-left: 0px;
     padding-right: 0px;
     border: 1px solid black;
+}
+
+a,
+a:hover{
+   color: black;
+   text-decoration: none;
 }
