@@ -15,7 +15,7 @@
 }
 
 .bg-primary {
-    background-color: #f8c620!important;
+    background-color: #f8c808!important;
 }
 
 .bg-secondary {
@@ -35,4 +35,23 @@
 .btn-outline-success:hover  {
     background-color: #bebebe!important;
     border: 1px #000000 solid!important;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: white;
+  background-size: 50%, 50%;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-:hover {
+  height: 100px;
+  width: 100px;
+  outline: ;
+  background-size: 50%, 50%;
+  border-radius: 50%;
+  border: 3px solid white;
 }
