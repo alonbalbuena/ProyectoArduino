@@ -16,9 +16,17 @@
     <h1>Hello, world!</h1>
 
     <?php
-    for ($i=0; $i < 10; $i++) { 
-        echo "<h1>hola</h1>";
+
+    $e=10;
+
+    funcion($e);
+
+    function funcion(int $x){
+        for ($i=0; $i < $x; $i++) { 
+            echo "<h1>hola</h1>";
+        }
     }
+
     ?>
 
     <!-- Optional JavaScript -->

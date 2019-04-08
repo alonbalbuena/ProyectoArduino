@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Gestor Energético | Inicio de Sesión</title>
+</head>
+
+<body>
+
+    <div class="container row p-5 mt-5">
+        
+        <!--usamos metodo post por la seguridad de los datos-->
+        <form action="comprobarlogin.php" method="post">
+            <input name="mailuid" type="text" placeholder="usuario">
+            <!--encriptamos contraseña con hash MD5-->
+            <input name="pass" type="password" placeholder="contraseña">
+
+            <button class="btn btn-primary" type="submit" name="login-submit">login</button>
+        </form>
+
+        <!--redirecciona para registrarse-->
+        <a class="btn btn-link" href="regitrarse.php">registrarse</a>
+
+        <!--para salir del usuario-->
+        <form action="includese/logout.inc.php" method="POST">
+            <button class="btn btn-secondary" type="submit" name="logout-submit">logout</button>
+        </form>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
