@@ -55,3 +55,9 @@
   border-radius: 50%;
   border: 3px solid white;
 }
+
+.card {
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 1px solid black;
+}
