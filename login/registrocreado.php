@@ -3,14 +3,17 @@
 //realizamos la conexion con bd
 require 'config.php';
 
-$consulta= $conexion -> query("INSERT INTO usuarios (nombre,contraseña)VALUES ('$nombre', '$contraseña')");
-
 //valores que introduciremos en la base de datos
-$nombre= $_POST["Email"];
-$contraseña= $_POST["contraseña"]
+$nombre= $_POST["nombre"];
+$contraseña= $_POST["contraseña"];
 
-//los introducimos
-$filaIntroducida = $consulta->fetch_array();
+
+//Creamos la consulta
+$sql="INSERT INTO usuarios (nombre,contraseña)VALUES ('$nombre', '$contraseña')";
+$consulta=$conexion -> query($sql);
+//si la consulta no devuelve ninguna valor como en el caso de
+//INSERT,UPDATE,ALTER... $consulta devuelve true o false
+
 
 ?>
 
@@ -39,17 +42,18 @@ $filaIntroducida = $consulta->fetch_array();
 
                         <div class="form-group col-md-12">
                             <?php
+                            echo "<p>$nombre $contraseña</p>";
                             //si la consulta va bien
-                            if ($consulta)
-                                echo "<label for="mensaje"><b>!! Felicidades ¡¡</b></label>
-                                <label for="mensaje"><b>Te has registrado de forma correcta,pronto
-                                tendrás conocimiento de los vatios que consume tu área de trabajo.</b></label>";
-                                //mostramos los datos
-                                echo "<p>$filaIntroducida</p>"
-                            else
-                                echo "<label for="mensaje"><b>Mala suerte</b></label>
-                                <label for="mensaje"><b>Te has registrado de forma incorrecta intentalo de nuevo</b></label>";
-                            
+                            if ($consulta){
+                                echo "<p>!! Felicidades ¡¡</p></label>
+                                <p>Te has registrado de forma correcta,pronto
+                                tendrás conocimiento de los vatios que consume tu área de trabajo.</p>";
+                            }
+                            else{
+                                echo "<p>Mala suerte</p>
+                                <p>Te has registrado de forma incorrecta intentalo de nuevo</p>";
+                            }
+                            $conexion->close();
                             ?>
                         </div>
                     </div>
