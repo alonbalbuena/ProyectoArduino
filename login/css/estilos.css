@@ -12,7 +12,7 @@ body {
 }
 
 .btn-buscar {
-    background-image: url(../images/lupa.png);
+    background-image: url(../img/lupa.png);
     background-size: cover;
     background-position: center;
     width: 38px;
@@ -40,6 +40,7 @@ body {
 .btn-outline-secondary,
 .btn-outline-secondary:hover  {
     border: none!important;
+    padding: 2px 2px;
 }
 
 .btn-outline-success,
@@ -47,23 +48,29 @@ body {
     background-color: #bebebe!important;
     border: 1px #000000 solid!important;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  outline: white;
-  background-size: 50%, 50%;
-  border-radius: 50%;
-  border: 3px solid white;
+    height: 100px;
+    width: 100px;
+    outline: white;
+    background-size: 50%, 50%;
+    border-radius: 50%;
+    border: 3px solid white;
 }
 
-.carousel-control-prev-icon:hover,
-.carousel-control-next-:hover {
-  height: 100px;
-  width: 100px;
-  background-size: 50%, 50%;
-  border-radius: 50%;
-  border: 3px solid white;
+a:hover > .carousel-control-prev-icon,
+a:hover > .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    background-size: 50%, 50%;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: #f8c808;
+}
+
+li.active {
+    background-color: #f8c808;
 }
 
 .card {
@@ -82,4 +89,12 @@ footer {
     position: center;
     top: 92.5%;
     text-align: center;
+}
+
+.card:last-child {
+    padding-right: 0px;
+}
+
+.card:first-child {
+    padding-left: 0px;
 }

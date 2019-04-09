@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut-icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut-icon" href=img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -22,7 +22,7 @@
     <div class="container overflow-hidden">
         <div class="row">
             <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary d-flex justify-content-between">
-                <a class="navbar-brand text-uppercase display-1" href="index.html">Gestor Energético</a>
+                <a class="navbar-brand text-uppercase" href="main.html">Gestor Energético</a>
                 <button class="navbar-toggler btn-outline-secondary" type="button" data-toggle="collapse"
                     data-target="#menu">
                     <span class="navbar-toggler-icon"></span>
@@ -32,10 +32,10 @@
                     <hr class="d-lg-none bg-secondary">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="main.html">Inicio</a>
+                            <h5><a class="nav-link" href="main.html">Inicio</a></h5>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="control.html" data-toggle="dropdown">Control</a>
+                            <h5><a class="nav-link dropdown-toggle" href="control.html" data-toggle="dropdown">Control</a></h5>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Arduino #1</a>
                                 <a class="dropdown-item" href="#">Arduino #2</a>
@@ -43,7 +43,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="registro.html" data-toggle="dropdown">Registro</a>
+                            <h5><a class="nav-link dropdown-toggle" href="registro.html" data-toggle="dropdown">Registro</a></h5>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Arduino #1</a>
                                 <a class="dropdown-item" href="#">Arduino #2</a>
@@ -51,15 +51,14 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="config.html">Configuración</a>
+                            <h5><a class="nav-link" href="ajustes.html">Ajustes</a></h5>
                         </li>
                     </ul>
                     <hr class="d-lg-none bg-secondary">
                     <form class="form-inline mb-2 my-lg-0 input-group ">
                         <input type="text" class="form-control border-secondary rounded-left" placeholder="Buscar">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-success btn-buscar bg-secondary rounded-right"
-                                type="submit"></button>
+                            <button class="btn btn-outline-success btn-buscar bg-secondary rounded-right" type="submit"></button>
                         </div>
                     </form>
                 </div>
@@ -68,7 +67,7 @@
 
         <!--Carousel-->
         <div class="row mt-5 pt-2 d-none d-md-block">
-            <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel" data-slide-to="1"></li>
@@ -76,13 +75,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="images/carousel-1.jpg" alt="First slide">
+                        <img class="d-block w-100" src="img/carousel-1.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="images/carousel-2.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="img/carousel-2.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="images/carousel-3.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="img/carousel-3.jpg" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -96,10 +95,10 @@
 
         <!--Cards-->
         <div class="row mt-5 mt-md-2 text-center">
-            <div class="col-12 col-md-6 col-lg-4 my-3">
+            <div class="col-12 col-md-6 col-xl-3 my-3">
                 <a href="control.html">
                     <div class="card">
-                        <img class="card-img-top " src="images/control.png" alt="Card image cap">
+                        <img class="card-img-top " src="img/control.png" alt="Card image cap">
                         <div class="card-body">
                             <h3 class="card-title">CONTROL</h3>
                         </div>
@@ -107,10 +106,10 @@
                 </a>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 my-3">
+            <div class="col-12 col-md-6 col-xl-3 my-3">
                 <a href="registro.html">
                     <div class="card">
-                        <img class="card-img-top " src="images/registro.png" alt="Card image cap">
+                        <img class="card-img-top " src="img/registro.png" alt="Card image cap">
                         <div class="card-body">
                             <h3 class="card-title">REGISTRO</h3>
                         </div>
@@ -118,12 +117,23 @@
                 </a>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 my-3">
-                <a href="config.html">
+            <div class="col-12 col-md-6 col-xl-3 my-3">
+                <a href="ajustes.html">
                     <div class="card">
-                        <img class="card-img-top " src="images/config.png" alt="Card image cap">
+                        <img class="card-img-top " src="img/ajustes.png" alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">CONFGURACIÓN</h3>
+                            <h3 class="card-title">AJUSTES</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3 my-3">
+                <a href="contacto.html">
+                    <div class="card">
+                        <img class="card-img-top " src="img/contacto.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">CONTACTO</h3>
                         </div>
                     </div>
                 </a>
