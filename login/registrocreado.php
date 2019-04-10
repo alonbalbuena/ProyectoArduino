@@ -1,42 +1,33 @@
 <?php
-<<<<<<< HEAD
     //archivo para crear la conexion
     require('config.php');
-    
+
     //SI LOS VALORES EXISTEN LOS INSERTAMOS
-    if (isset($_POST['email']) && isset($_POST['contraseña']) && isset($_POST['direccion']) && isset($_POST['ciudad']) && isset($_POST['comunidad']) && isset($_POST['condiciones'])){
+    //empty????? isset?????
+    if (!empty($_POST["email"]) && !empty($_POST["contraseña"]) && !empty($_POST["direccion"]) && !empty($_POST["ciudad"]) && !empty($_POST["comunidad"]) &&  !empty($_POST["condiciones"])) {
 
         $email = $_POST['email'];
-	    $contraseña = $_POST['contraseña'];
-        $direccion = $_POST['direccion'];
-        $ciudad = $_POST['ciudad'];
-        $comunidad = $_POST['comunidad'];
-        $condiciones = $_POST['condiciones'];
+        $contraseña = $_POST["contraseña"];
+        $direccion = $_POST["direccion"];
+        $ciudad = $_POST["ciudad"];
+        $comunidad = $_POST["comunidad"];
+        $condiciones = $_POST["condiciones"];//En bbdd tiene por defecto "no"
 
-        //insertamos
-        $sql = "INSERT INTO `user` (username, password, email) VALUES ('$username', '$password', '$email')";
-        $conexion->query($sql);
+        //insertamos(IMPORTANTE EL PUNTO Y COMA)
+        $sql = "insert into personas (email, contraseña, direccion, ciudad, comunidad, condiciones) values('$email', '$contraseña', '$direccion','$ciudad','$comunidad','$condiciones');";
 
-        //variable para saber si funciona
+        $funciona=$conexion->query($sql);
+
+        //si no funciona el sql
+        if (!$funciona) {
+            exit("La sentencia sql ha tenido alguna complicacion");
+        }
+
+        //si ya existe el usuario que no te deje registrarlo y te salte algun aviso
+    } else {
+        //si no
+        exit("le ha faltado algun campo por rellenar");
     }
-=======
-
-//realizamos la conexion con bd
-require 'config.php';
-
-//valores que introduciremos en la base de datos
-$nombre= $_POST["nombre"];
-$contraseña= $_POST["contraseña"];
-
-
-//Creamos la consulta
-$sql="INSERT INTO usuarios (nombre,contraseña)VALUES ('$nombre', '$contraseña')";
-$consulta=$conexion -> query($sql);
-//si la consulta no devuelve ninguna valor como en el caso de
-//INSERT,UPDATE,ALTER... $consulta devuelve true o false
-
-
->>>>>>> c3a5a530ddc243fb35d16bc48ce9df30dfb5155b
 ?>
 
 <!doctype html>
@@ -61,34 +52,8 @@ $consulta=$conexion -> query($sql);
             <fieldset>
                 <form>
                     <div class="form-row col-md-12">
-                            <?php
-                            echo "<p>$nombre $contraseña</p>";
-                            //si la consulta va bien
-<<<<<<< HEAD
-                            if ($funciona){
-                                echo "<b>!! Felicidades ¡¡ Te has registrado de forma correcta,pronto tendrás conocimiento de los vatios que consume tu área de trabajo</b>";
-                                //mostramos los datos
-                                echo "<p>Bienvenido $email</p>";
-                            }
-                            else{
-                                echo "<b>Mala suerte. Te has registrado de forma incorrecta intentalo de nuevo</b>";
-                        }
-                        ?>
+                        <b>!! Felicidades ¡¡ Te has registrado de forma correcta,pronto tendrás conocimiento de los vatios que consume tu área de trabajo</b>
                         <a href='login.html' class='btn btn-info' role='button'>Confirmar</a>
-=======
-                            if ($consulta){
-                                echo "<p>!! Felicidades ¡¡</p></label>
-                                <p>Te has registrado de forma correcta,pronto
-                                tendrás conocimiento de los vatios que consume tu área de trabajo.</p>";
-                            }
-                            else{
-                                echo "<p>Mala suerte</p>
-                                <p>Te has registrado de forma incorrecta intentalo de nuevo</p>";
-                            }
-                            $conexion->close();
-                            ?>
-                        </div>
->>>>>>> c3a5a530ddc243fb35d16bc48ce9df30dfb5155b
                     </div>
                 </form>
             </fieldset>
