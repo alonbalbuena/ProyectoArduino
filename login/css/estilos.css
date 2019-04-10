@@ -7,8 +7,7 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
-.destaca {
-    text-transform: uppercase;
+.navbar-brand {
     font-family: 'Fredericka the Great', cursive;
 }
 
@@ -98,6 +97,7 @@ footer {
 
 .card:first-child {
     padding-left: 0px;
+<<<<<<< HEAD
 }
 
 .btn-primary,
@@ -144,4 +144,6 @@ ul {
 
 .card-img-top:hover {
     background-image: linear-gradient(141deg, #f7c707 0%,  #1A7CC4 75%);
+=======
+>>>>>>> 33c84a84cd37c6734bdfb6e977f21bd14caa5da4
 }
