@@ -6,7 +6,10 @@ body{
     margin: 0;
     
 }
-
+-paleta de colores
+#467DF8 azul
+#91913F oliva
+#1A7CC4 mar
 .card{
     margin-top: 12%;
 }
@@ -22,15 +25,16 @@ body{
   
   fieldset { 
     background-color: rgb(230, 255, 254);
-    border: green 3px solid; 
+    border: #467DF8 3px solid; 
     padding: 10px 20px 20px;
-    background-color: darkseagreen;
+    background-color: #f7c707;
     margin-top: 12%;
+    font-size: 150%
   } 
   
   legend { 
-    background-color: rgb(192, 192, 192); 
-    border: green 3px solid; 
+    background-color: #1A7CC4;
+    border: black 3px solid; 
     font-size: 120%; 
     padding: 0px 20px; 
     text-align: center;
@@ -45,6 +49,11 @@ body{
     text-align: right; 
     margin: 10px 0px; 
     
+  }
+
+  a.btn{
+    background-color:#1A7CC4;
+
   }
   
   address { 
