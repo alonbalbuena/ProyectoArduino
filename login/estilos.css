@@ -1,0 +1,139 @@
+/* Estilos */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.destaca {
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.btn-buscar {
+    background-image: url(../img/lupa.png);
+    background-size: cover;
+    background-position: center;
+    width: 38px;
+    height: 38px;
+}
+
+@media (min-width: 992px) {
+    .form-inline {
+        width: 300px;
+    }
+}
+
+.bg-primary {
+    background-color: #f8c808!important;
+}
+
+.bg-secondary {
+    background-color: #000000!important;
+}
+
+.border-secondary {
+    border: 1px #000000 solid!important;
+}
+
+.btn-outline-secondary,
+.btn-outline-secondary:hover  {
+    border: none!important;
+    padding: 2px 2px;
+}
+
+.btn-outline-success,
+.btn-outline-success:hover  {
+    background-color: #bebebe!important;
+    border: 1px #000000 solid!important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: white;
+    background-size: 50%, 50%;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+a:hover > .carousel-control-prev-icon,
+a:hover > .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    background-size: 50%, 50%;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: #f8c808;
+}
+
+li.active {
+    background-color: #f8c808;
+}
+
+.card {
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 1px solid black;
+}
+
+a,
+a:hover{
+   color: black;
+   text-decoration: none;
+}
+
+footer {
+    position: center;
+    top: 92.5%;
+    text-align: center;
+}
+
+.card:last-child {
+    padding-right: 0px;
+}
+
+.card:first-child {
+    padding-left: 0px;
+}
+
+.btn-primary,
+.btn-primary:hover {
+    background-color: #f8c808;
+    border: none;
+    color: black;
+}
+
+.badge-primary {
+    background-color: #000000;
+}
+
+hr {
+    border: #000000 solid 1px;
+}
+
+ul {
+    width: 100%
+}
+
+.jumbotron {
+    background-color: rgb(212, 211, 211);
+}
+
+.list-group-item:hover > span.badge-primary {
+    background-color: white;
+    color: black;
+}
+
+.list-group-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.card:hover > card-body {
+    color: white;
+    background-color: black;
+}
