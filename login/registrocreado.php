@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
     //archivo para crear la conexion
     require('config.php');
     
@@ -18,6 +19,24 @@
 
         //variable para saber si funciona
     }
+=======
+
+//realizamos la conexion con bd
+require 'config.php';
+
+//valores que introduciremos en la base de datos
+$nombre= $_POST["nombre"];
+$contraseña= $_POST["contraseña"];
+
+
+//Creamos la consulta
+$sql="INSERT INTO usuarios (nombre,contraseña)VALUES ('$nombre', '$contraseña')";
+$consulta=$conexion -> query($sql);
+//si la consulta no devuelve ninguna valor como en el caso de
+//INSERT,UPDATE,ALTER... $consulta devuelve true o false
+
+
+>>>>>>> c3a5a530ddc243fb35d16bc48ce9df30dfb5155b
 ?>
 
 <!doctype html>
@@ -43,7 +62,9 @@
                 <form>
                     <div class="form-row col-md-12">
                             <?php
+                            echo "<p>$nombre $contraseña</p>";
                             //si la consulta va bien
+<<<<<<< HEAD
                             if ($funciona){
                                 echo "<b>!! Felicidades ¡¡ Te has registrado de forma correcta,pronto tendrás conocimiento de los vatios que consume tu área de trabajo</b>";
                                 //mostramos los datos
@@ -54,6 +75,20 @@
                         }
                         ?>
                         <a href='login.html' class='btn btn-info' role='button'>Confirmar</a>
+=======
+                            if ($consulta){
+                                echo "<p>!! Felicidades ¡¡</p></label>
+                                <p>Te has registrado de forma correcta,pronto
+                                tendrás conocimiento de los vatios que consume tu área de trabajo.</p>";
+                            }
+                            else{
+                                echo "<p>Mala suerte</p>
+                                <p>Te has registrado de forma incorrecta intentalo de nuevo</p>";
+                            }
+                            $conexion->close();
+                            ?>
+                        </div>
+>>>>>>> c3a5a530ddc243fb35d16bc48ce9df30dfb5155b
                     </div>
                 </form>
             </fieldset>
