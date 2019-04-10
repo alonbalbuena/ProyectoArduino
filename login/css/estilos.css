@@ -7,7 +7,8 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
-.navbar-brand {
+.destaca {
+    text-transform: uppercase;
     font-family: 'Fredericka the Great', cursive;
 }
 
@@ -97,4 +98,42 @@ footer {
 
 .card:first-child {
     padding-left: 0px;
+}
+
+.btn-primary,
+.btn-primary:hover {
+    background-color: #f8c808;
+    border: none;
+    color: black;
+}
+
+.badge-primary {
+    background-color: #000000;
+}
+
+hr {
+    border: #000000 solid 1px;
+}
+
+ul {
+    width: 100%
+}
+
+.jumbotron {
+    background-color: rgb(212, 211, 211);
+}
+
+.list-group-item:hover > span.badge-primary {
+    background-color: white;
+    color: black;
+}
+
+.list-group-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.card:hover > card-body {
+    color: white;
+    background-color: black;
 }
