@@ -1,17 +1,23 @@
 <?php
+    //archivo para crear la conexion
+    require('config.php');
+    
+    //SI LOS VALORES EXISTEN LOS INSERTAMOS
+    if (isset($_POST['email']) && isset($_POST['contraseña']) && isset($_POST['direccion']) && isset($_POST['ciudad']) && isset($_POST['comunidad']) && isset($_POST['condiciones'])){
 
-//realizamos la conexion con bd
-require 'config.php';
+        $email = $_POST['email'];
+	    $contraseña = $_POST['contraseña'];
+        $direccion = $_POST['direccion'];
+        $ciudad = $_POST['ciudad'];
+        $comunidad = $_POST['comunidad'];
+        $condiciones = $_POST['condiciones'];
 
-$consulta= $conexion -> query("INSERT INTO usuarios (nombre,contraseña)VALUES ('$nombre', '$contraseña')");
+        //insertamos
+        $sql = "INSERT INTO `user` (username, password, email) VALUES ('$username', '$password', '$email')";
+        $conexion->query($sql);
 
-//valores que introduciremos en la base de datos
-$nombre= $_POST["Email"];
-$contraseña= $_POST["contraseña"]
-
-//los introducimos
-$filaIntroducida = $consulta->fetch_array();
-
+        //variable para saber si funciona
+    }
 ?>
 
 <!doctype html>
@@ -36,32 +42,23 @@ $filaIntroducida = $consulta->fetch_array();
             <fieldset>
                 <form>
                     <div class="form-row col-md-12">
-
-                        <div class="form-group col-md-12">
                             <?php
                             //si la consulta va bien
-                            if ($consulta)
-                                echo "<label for="mensaje"><b>!! Felicidades ¡¡</b></label>
-                                <label for="mensaje"><b>Te has registrado de forma correcta,pronto
-                                tendrás conocimiento de los vatios que consume tu área de trabajo.</b></label>";
+                            if ($funciona){
+                                echo "<b>!! Felicidades ¡¡ Te has registrado de forma correcta,pronto tendrás conocimiento de los vatios que consume tu área de trabajo</b>";
                                 //mostramos los datos
-                                echo "<p>$filaIntroducida</p>"
-                            else
-                                echo "<label for="mensaje"><b>Mala suerte</b></label>
-                                <label for="mensaje"><b>Te has registrado de forma incorrecta intentalo de nuevo</b></label>";
-                            
-                            ?>
-                        </div>
+                                echo "<p>Bienvenido $email</p>";
+                            }
+                            else{
+                                echo "<b>Mala suerte. Te has registrado de forma incorrecta intentalo de nuevo</b>";
+                        }
+                        ?>
+                        <a href='login.html' class='btn btn-info' role='button'>Confirmar</a>
                     </div>
-                    <a href="login.html" class="btn btn-info" role="button">Confirmar</a>
                 </form>
             </fieldset>
         </div>
     </table>
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
