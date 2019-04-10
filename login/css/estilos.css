@@ -137,3 +137,7 @@ ul {
     color: white;
     background-color: black;
 }
+
+.card-img-top {
+    background-image: linear-gradient(141deg,  #1A7CC4 0%, #467DF8 75%);
+}
