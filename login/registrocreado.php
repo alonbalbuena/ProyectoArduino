@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
     //archivo para crear la conexion
     require('config.php');
     
@@ -19,24 +18,6 @@
 
         //variable para saber si funciona
     }
-=======
-
-//realizamos la conexion con bd
-require 'config.php';
-
-//valores que introduciremos en la base de datos
-$nombre= $_POST["nombre"];
-$contraseña= $_POST["contraseña"];
-
-
-//Creamos la consulta
-$sql="INSERT INTO usuarios (nombre,contraseña)VALUES ('$nombre', '$contraseña')";
-$consulta=$conexion -> query($sql);
-//si la consulta no devuelve ninguna valor como en el caso de
-//INSERT,UPDATE,ALTER... $consulta devuelve true o false
-
-
->>>>>>> c3a5a530ddc243fb35d16bc48ce9df30dfb5155b
 ?>
 
 <!doctype html>
