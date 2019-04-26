@@ -1,3 +1,25 @@
+<?php
+
+require 'config.php';
+
+//comprobamos si existe una sesion
+if (isset($_SESSION['email']) && isset($_SESSION['contraseña'])) {
+    $consulta = $conexion->query("SELECT email,contraseña FROM personas WHERE email = ".$_SESSION['email']." AND contraseña = ".$_SESSION['contraseña']);
+
+    //Comprobamos si el usuario existe
+    if ($consulta === false) {
+        header('Location: localhost/proyecto/login/login.php');
+    }
+} else {
+    //si no existe sesion, la creamos
+    //creamos la sesion solo si hay datos por POST
+    if (isset($_POST['email']) && isset($_POST['contraseña'])) {
+        session_start();
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['contraseña'] = $_POST['contraseña'];
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 

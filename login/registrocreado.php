@@ -2,6 +2,7 @@
     //archivo para crear la conexion
     require('config.php');
 
+
     //SI LOS VALORES EXISTEN LOS INSERTAMOS
     //empty????? isset?????
     if (!empty($_POST["email"]) && !empty($_POST["contraseña"]) && !empty($_POST["direccion"]) && !empty($_POST["ciudad"]) && !empty($_POST["comunidad"]) &&  !empty($_POST["condiciones"])) {
