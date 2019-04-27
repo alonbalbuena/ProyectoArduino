@@ -1,6 +1,7 @@
 <?php
     //archivo para crear la conexion
     require('config.php');
+    
 ?>
 <!doctype html>
 <html lang="en">
