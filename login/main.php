@@ -2,23 +2,22 @@
 
 require 'config.php';
 
-//comprobamos si existe una sesion
-if (isset($_SESSION['email']) && isset($_SESSION['contraseña'])) {
-    $consulta = $conexion->query("SELECT email,contraseña FROM personas WHERE email = ".$_SESSION['email']." AND contraseña = ".$_SESSION['contraseña']);
-
-    //Comprobamos si el usuario existe
-    if ($consulta === false) {
-        header('Location: localhost/proyecto/login/login.php');
-    }
-} else {
-    //si no existe sesion, la creamos
-    //creamos la sesion solo si hay datos por POST
-    if (isset($_POST['email']) && isset($_POST['contraseña'])) {
-        session_start();
-        $_SESSION['email'] = $_POST['email'];
-        $_SESSION['contraseña'] = $_POST['contraseña'];
-    }
+//si no existe session la creamos
+if (!isset($_SESSION['email']) && !isset($_SESSION['contraseña'])) {
+    session_start();
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['contraseña'] = $_POST['contraseña'];
+    
 }
+
+//comprobamos si existe ese usuario
+$consulta = $conexion->query("SELECT email,contraseña FROM personas WHERE email = '".$_SESSION['email']."' AND contraseña = '".$_SESSION['contraseña']."';");
+
+//si no existe nos redirige al login
+if ($consulta->num_rows === 0) {
+    header('Location: login.php');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -40,7 +39,6 @@ if (isset($_SESSION['email']) && isset($_SESSION['contraseña'])) {
 </head>
 
 <body>
-    <!--Navegador-->
     <div class="container">
         <div class="row">
             <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary d-flex justify-content-between">

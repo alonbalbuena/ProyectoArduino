@@ -1,6 +1,3 @@
-<?php
-
-?>
 
 <!doctype html>
 <html lang="en">
@@ -29,20 +26,15 @@
                         <div class="form-group col-md-12">
                             <label for="Email"><b>Email</b></label>
                             <input name="email" type="email" class="form-control" id="Email" placeholder="Email">
-
                         </div>
-
                     </div>
-
 
                     <div class="form-row col-md-12">
                         <div class="form-group col-md-12">
                             <label for="Contraseña"><b>Contraseña</b></label>
-                            <input name="contraseña" type="password" class="form-control" id="Contraseña" placeholder="Contraseña">
+                            <input name="contraseña" type="password" class="form-control" id="Contraseña"
+                                placeholder="Contraseña">
                         </div>
-                        
-
-
                     </div>
 
                     <div class="form-group">
