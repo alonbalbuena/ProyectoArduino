@@ -40,8 +40,9 @@
                                 //si ya existe lo devolvemos a la pagina de registro
                                 header('Location: registro.html');
                             } else {
-                                $sql = "insert into personas (email, contraseña, direccion, ciudad, comunidad, condiciones) values('$email', '$contraseña', '$direccion','$ciudad','$comunidad','$condiciones');";
-                                
+                                $sql = "insert into personas (email, contraseña, direccion, ciudad, comunidad, condiciones) values('".$email."', '".$contraseña."', '".$direccion."','".$ciudad."','".$comunidad."','".$condiciones."');";
+
+
                                 $conexion->query($sql); 
                         ?>
                         <b>Felicidades el registro ha sido satisfactorio</b>
@@ -65,4 +66,5 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>

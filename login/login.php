@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -48,7 +47,7 @@
 
 
                     <div class="form-check">
-                        <input class="btn" type="submit" value="confirmar">
+                        <input class="btn btn-primary" type="submit" value="confirmar">
                         <a href="registro.html" class="btn" role="button">Registrarte</a>
                     </div>
 
