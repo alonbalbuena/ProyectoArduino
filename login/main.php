@@ -1,3 +1,24 @@
+<?php
+
+require 'config.php';
+
+//si no existe session la creamos
+if (!isset($_SESSION['email']) && !isset($_SESSION['contraseña'])) {
+    session_start();
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['contraseña'] = $_POST['contraseña'];
+    
+}
+
+//comprobamos si existe ese usuario
+$consulta = $conexion->query("SELECT email,contraseña FROM personas WHERE email = '".$_SESSION['email']."' AND contraseña = '".$_SESSION['contraseña']."';");
+
+//si no existe nos redirige al login
+if ($consulta->num_rows === 0) {
+    header('Location: login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,7 +39,6 @@
 </head>
 
 <body>
-    <!--Navegador-->
     <div class="container">
         <div class="row">
             <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary d-flex justify-content-between">

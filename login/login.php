@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estiloslogin.css">
-    <title>Registro</title>
+    <title>login</title>
 </head>
 
 <body>
@@ -20,25 +21,20 @@
 
             <fieldset class="rounded">
                 <legend class="rounded-pill"><b class="text-justify-center">Inicio de Sesión</b></legend>
-                <form>
+                <form action="main.php" method="post">
                     <div class="form-row col-md-12">
                         <div class="form-group col-md-12">
                             <label for="Email"><b>Email</b></label>
-                            <input type="email" class="form-control" id="Email" placeholder="Email">
-
+                            <input name="email" type="email" class="form-control" id="Email" placeholder="Email">
                         </div>
-
                     </div>
-
 
                     <div class="form-row col-md-12">
                         <div class="form-group col-md-12">
-                            <label for="Conytaseña"><b>Contraseña</b></label>
-                            <input type="password" class="form-control" id="Contraseña" placeholder="Contraseña">
+                            <label for="Contraseña"><b>Contraseña</b></label>
+                            <input name="contraseña" type="password" class="form-control" id="Contraseña"
+                                placeholder="Contraseña">
                         </div>
-                        
-
-
                     </div>
 
                     <div class="form-group">
@@ -52,9 +48,9 @@
 
 
                     <div class="form-check">
-                    <a href="registro.html" class="btn" role="button">Registrarte</a>
-                    <a href="main.html" class="btn" role="button">Confirmar</a>
-                </div>
+                        <input class="btn" type="submit" value="confirmar">
+                        <a href="registro.html" class="btn" role="button">Registrarte</a>
+                    </div>
 
 
                 </form>
